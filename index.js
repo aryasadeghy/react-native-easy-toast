@@ -14,11 +14,9 @@ import {
     Dimensions,
     Text,
     TouchableWithoutFeedback,
-    ViewPropTypes as RNViewPropTypes,
 } from 'react-native'
 
 import PropTypes from 'prop-types';
-const ViewPropTypes = RNViewPropTypes || View.propTypes;
 export const DURATION = {
     LENGTH_SHORT: 500,
     FOREVER: 0,
@@ -146,20 +144,7 @@ const styles = StyleSheet.create({
     }
 });
 
-Toast.propTypes = {
-    style: ViewPropTypes.style,
-    position: PropTypes.oneOf([
-        'top',
-        'center',
-        'bottom',
-    ]),
-    textStyle: Text.propTypes.style,
-    positionValue:PropTypes.number,
-    fadeInDuration:PropTypes.number,
-    fadeOutDuration:PropTypes.number,
-    opacity:PropTypes.number,
-    useNativeAnimation:PropTypes.bool
-}
+
 
 Toast.defaultProps = {
     position: 'bottom',
